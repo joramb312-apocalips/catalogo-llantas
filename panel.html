@@ -54,7 +54,7 @@ body{
 /* GRID BOTONES */
 .menu{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
   gap:15px;
 }
 
@@ -65,7 +65,7 @@ body{
   border:none;
   padding:18px 10px;
   border-radius:14px;
-  font-size:18px;
+  font-size:16px;
   font-weight:bold;
   cursor:pointer;
   transition:.3s;
@@ -95,6 +95,7 @@ body{
   <div class="menu-title">📦 Medidas disponibles</div>
 
   <div class="menu">
+    <!-- RINES -->
     <button onclick="ir('rin13.html')">Rin 13</button>
     <button onclick="ir('rin14.html')">Rin 14</button>
     <button onclick="ir('rin15.html')">Rin 15</button>
@@ -104,10 +105,17 @@ body{
     <button onclick="ir('rin19.html')">Rin 19</button>
     <button onclick="ir('rin20.html')">Rin 20</button>
 
-    <button onclick="ir('33x12.50R20.html')">33x12.50R20</button>
-    <button onclick="ir('11L22,24,25.html')">11L22,24,25</button>
-    <button onclick="ir('27x8.50R14,15.html')">27x8.50R14,15</button>
-    <button onclick="ir('31x10.50r15.html')">31x10.50 R15</button>
+    <!-- MEDIDAS ESPECIALES -->
+    <button onclick="ir('33x12.50R20.html')">33x12.50 R20</button>
+    <button onclick="ir('11L22-24-25.html')">11L 22 / 24 / 25</button>
+    <button onclick="ir('27x8.50R14-15.html')">27x8.50 R14 / R15</button>
+    <button onclick="ir('31x10.50R15.html')">31x10.50 R15</button>
+
+    <!-- TORNEL -->
+    <button onclick="ir('tornel70014.html')">Tornel 7.00-14</button>
+    <button onclick="ir('tornel70015.html')">Tornel 7.00-15</button>
+    <button onclick="ir('tornel70016.html')">Tornel 7.00-16</button>
+    <button onclick="ir('tornel70017.html')">Tornel 7.00-17</button>
   </div>
 </div>
 
