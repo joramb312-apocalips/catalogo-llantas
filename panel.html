@@ -6,26 +6,85 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+*{
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
 body{
   margin:0;
-  font-family:Arial, sans-serif;
   background:#f2f2f2;
   padding:20px;
 }
 
+/* HEADER */
 .header{
   background:#111;
   color:white;
-  padding:15px;
-  border-radius:12px;
+  padding:20px;
+  border-radius:14px;
   margin-bottom:20px;
 }
 
+.header h2{
+  margin:0 0 5px 0;
+}
+
+.header p{
+  margin:0;
+  opacity:.8;
+}
+
+/* CARD INFO */
 .card{
   background:white;
   padding:20px;
-  border-radius:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,.2);
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
+  margin-bottom:25px;
+}
+
+/* TITULO MENU */
+.menu-title{
+  font-size:20px;
+  margin-bottom:15px;
+  color:#111;
+}
+
+/* GRID MENU */
+.menu{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:16px;
+}
+
+/* BOTONES */
+.item{
+  background:linear-gradient(135deg,#1a1a1a,#333);
+  color:white;
+  padding:20px 10px;
+  border-radius:14px;
+  text-align:center;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 6px 15px rgba(0,0,0,.25);
+}
+
+.item:hover{
+  transform:scale(1.05);
+  background:linear-gradient(135deg,#000,#222);
+}
+
+.item strong{
+  display:block;
+  font-size:18px;
+}
+
+.item span{
+  display:block;
+  margin-top:6px;
+  font-size:13px;
+  color:#ccc;
 }
 </style>
 </head>
@@ -38,9 +97,77 @@ body{
 </div>
 
 <div class="card">
-  <h3>Panel listo</h3>
-  <p>Aquí irá el buscador de llantas.</p>
+  <h3>Panel de control</h3>
   <p>No necesitas bajar mercancía para buscar.</p>
+  <p>Selecciona la medida de la llanta.</p>
+</div>
+
+<div class="card">
+  <div class="menu-title">📦 Medidas de llantas</div>
+
+  <div class="menu">
+
+    <div class="item" onclick="abrir('rin13')">
+      <strong>Rin 13</strong>
+      <span>Autos compactos</span>
+    </div>
+
+    <div class="item" onclick="abrir('rin14')">
+      <strong>Rin 14</strong>
+      <span>Uso urbano</span>
+    </div>
+
+    <div class="item" onclick="abrir('rin15')">
+      <strong>Rin 15</strong>
+      <span>Estándar</span>
+    </div>
+
+    <div class="item" onclick="abrir('rin16')">
+      <strong>Rin 16</strong>
+      <span>Camioneta</span>
+    </div>
+
+    <div class="item" onclick="abrir('rin17')">
+      <strong>Rin 17</strong>
+      <span>Alta gama</span>
+    </div>
+
+    <div class="item" onclick="abrir('rin18')">
+      <strong>Rin 18</strong>
+      <span>Deportivas</span>
+    </div>
+
+    <div class="item" onclick="abrir('rin19')">
+      <strong>Rin 19</strong>
+      <span>Especial</span>
+    </div>
+
+    <div class="item" onclick="abrir('rin20')">
+      <strong>Rin 20</strong>
+      <span>Premium</span>
+    </div>
+
+    <div class="item" onclick="abrir('33x12')">
+      <strong>33x12</strong>
+      <span>Todo terreno</span>
+    </div>
+
+    <div class="item" onclick="abrir('31x10r20')">
+      <strong>31x10 R20</strong>
+      <span>Camioneta</span>
+    </div>
+
+    <div class="item" onclick="abrir('27x8.50')">
+      <strong>27x8.50</strong>
+      <span>R14 / R15</span>
+    </div>
+
+    <div class="item" onclick="abrir('31x10.50r15')">
+      <strong>31x10.50</strong>
+      <span>Rin 15</span>
+    </div>
+
+  </div>
 </div>
 
 <script>
@@ -48,7 +175,13 @@ body{
 if(localStorage.getItem("login") !== "ok"){
   window.location.href = "index.html";
 }
+
+function abrir(medida){
+  alert("Abrir catálogo: " + medida);
+  // después aquí irá la lista real
+}
 </script>
 
 </body>
 </html>
+
