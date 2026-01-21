@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Llantas Rin</title>
+<title>Rin 13 | Catálogo de Llantas</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -17,7 +17,25 @@ body{
   padding:20px;
 }
 
-/* BOTON VOLVER */
+/* HEADER */
+.header{
+  background:#111;
+  color:white;
+  padding:18px;
+  border-radius:14px;
+  margin-bottom:20px;
+}
+
+.header h2{
+  margin:0;
+}
+
+.header p{
+  margin:5px 0 0 0;
+  opacity:.8;
+}
+
+/* VOLVER */
 .volver{
   margin-bottom:20px;
 }
@@ -38,7 +56,7 @@ body{
   gap:20px;
 }
 
-/* TARJETA LLANTA */
+/* TARJETA */
 .llanta{
   background:white;
   border-radius:16px;
@@ -57,7 +75,7 @@ body{
 
 /* TEXTO */
 .llanta h3{
-  margin:5px 0;
+  margin:5px 0 10px 0;
   font-size:18px;
 }
 
@@ -66,7 +84,6 @@ body{
   font-size:14px;
 }
 
-/* DATOS */
 .dato{
   font-weight:bold;
 }
@@ -75,36 +92,54 @@ body{
 
 <body>
 
+<div class="header">
+  <h2>Llantas Rin 13</h2>
+  <p>Autos compactos / uso urbano</p>
+</div>
+
 <div class="volver">
-  <button onclick="history.back()">⬅ Volver</button>
+  <button onclick="history.back()">⬅ Volver al panel</button>
 </div>
 
 <div class="grid">
 
-  <!-- BLOQUE 1 -->
+  <!-- LLANTA 1 -->
   <div class="llanta">
-    <img src="imagenes/llanta1.jpg" alt="Llanta">
+    <img src="imagenes/rin13_1.jpg" alt="Llanta Rin 13">
 
-    <h3>Marca: Michelin</h3>
+    <h3>Marca: Mirage</h3>
 
-    <p><span class="dato">Medida:</span> 225/60R15</p>
-    <p><span class="dato">Cantidad disponible:</span> 8</p>
-    <p><span class="dato">Cantidad camioneta:</span> 4</p>
-    <p><span class="dato">Precio operación 1:</span> $1,800</p>
-    <p><span class="dato">Precio operación 2:</span> $1,650</p>
+    <p><span class="dato">Uso:</span> Auto compacto / ciudad</p>
+    <p><span class="dato">Medida:</span> 155/70R13</p>
+    <p><span class="dato">Cantidad disponible:</span> 6</p>
+    <p><span class="dato">Cantidad 2:</span> 2</p>
+    <p><span class="dato">Precio normal:</span> $1,200</p>
   </div>
 
-  <!-- BLOQUE 2 -->
+  <!-- LLANTA 2 -->
   <div class="llanta">
-    <img src="imagenes/llanta2.jpg" alt="Llanta">
+    <img src="imagenes/rin13_2.jpg" alt="Llanta Rin 13">
 
-    <h3>Marca: Goodyear</h3>
+    <h3>Marca: Compasal</h3>
 
-    <p><span class="dato">Medida:</span> 205/65R15</p>
-    <p><span class="dato">Cantidad disponible:</span> 6</p>
-    <p><span class="dato">Cantidad camioneta:</span> 2</p>
-    <p><span class="dato">Precio operación 1:</span> $1,600</p>
-    <p><span class="dato">Precio operación 2:</span> $1,450</p>
+    <p><span class="dato">Uso:</span> Auto urbano</p>
+    <p><span class="dato">Medida:</span> 165/65R13</p>
+    <p><span class="dato">Cantidad disponible:</span> 4</p>
+    <p><span class="dato">Cantidad 2:</span> 0</p>
+    <p><span class="dato">Precio normal:</span> $1,250</p>
+  </div>
+
+  <!-- LLANTA 3 -->
+  <div class="llanta">
+    <img src="imagenes/rin13_3.jpg" alt="Llanta Rin 13">
+
+    <h3>Marca: Blackhawk</h3>
+
+    <p><span class="dato">Uso:</span> Auto compacto / trabajo</p>
+    <p><span class="dato">Medida:</span> 175/70R13</p>
+    <p><span class="dato">Cantidad disponible:</span> 8</p>
+    <p><span class="dato">Cantidad 2:</span> 4</p>
+    <p><span class="dato">Precio normal:</span> $1,350</p>
   </div>
 
 </div>
