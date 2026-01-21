@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Llantas Rin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:#f2f2f2;
+  padding:20px;
+}
+
+/* BOTON VOLVER */
+.volver{
+  margin-bottom:20px;
+}
+
+.volver button{
+  background:#111;
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+/* TARJETA LLANTA */
+.llanta{
+  background:white;
+  border-radius:16px;
+  padding:15px;
+  box-shadow:0 6px 18px rgba(0,0,0,.2);
+}
+
+/* FOTO */
+.llanta img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:12px;
+}
+
+/* TEXTO */
+.llanta h3{
+  margin:5px 0;
+  font-size:18px;
+}
+
+.llanta p{
+  margin:4px 0;
+  font-size:14px;
+}
+
+/* DATOS */
+.dato{
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="volver">
+  <button onclick="history.back()">⬅ Volver</button>
+</div>
+
+<div class="grid">
+
+  <!-- BLOQUE 1 -->
+  <div class="llanta">
+    <img src="imagenes/llanta1.jpg" alt="Llanta">
+
+    <h3>Marca: Michelin</h3>
+
+    <p><span class="dato">Medida:</span> 225/60R15</p>
+    <p><span class="dato">Cantidad disponible:</span> 8</p>
+    <p><span class="dato">Cantidad camioneta:</span> 4</p>
+    <p><span class="dato">Precio operación 1:</span> $1,800</p>
+    <p><span class="dato">Precio operación 2:</span> $1,650</p>
+  </div>
+
+  <!-- BLOQUE 2 -->
+  <div class="llanta">
+    <img src="imagenes/llanta2.jpg" alt="Llanta">
+
+    <h3>Marca: Goodyear</h3>
+
+    <p><span class="dato">Medida:</span> 205/65R15</p>
+    <p><span class="dato">Cantidad disponible:</span> 6</p>
+    <p><span class="dato">Cantidad camioneta:</span> 2</p>
+    <p><span class="dato">Precio operación 1:</span> $1,600</p>
+    <p><span class="dato">Precio operación 2:</span> $1,450</p>
+  </div>
+
+</div>
+
+<script>
+if(localStorage.getItem("login") !== "ok"){
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
