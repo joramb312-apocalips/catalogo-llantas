@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Panel | Catálogo de Llantas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f2f2f2;
+  padding:20px;
+}
+
+.header{
+  background:#111;
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h2>Bienvenido, Antonio</h2>
+  <p>Librería privada de llantas</p>
+</div>
+
+<div class="card">
+  <h3>Panel listo</h3>
+  <p>Aquí irá el buscador de llantas.</p>
+  <p>No necesitas bajar mercancía para buscar.</p>
+</div>
+
+<script>
+// Protección de acceso
+if(localStorage.getItem("login") !== "ok"){
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
