@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Rin 15 | Catálogo de Llantas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:#f2f2f2;
+  padding:20px;
+}
+
+/* HEADER */
+.header{
+  background:#111;
+  color:white;
+  padding:18px;
+  border-radius:14px;
+  margin-bottom:20px;
+}
+
+.header h2{
+  margin:0;
+}
+
+.header p{
+  margin:5px 0 0 0;
+  opacity:.8;
+}
+
+/* VOLVER */
+.volver{
+  margin-bottom:20px;
+}
+
+.volver button{
+  background:#111;
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+/* TARJETA */
+.llanta{
+  background:white;
+  border-radius:16px;
+  padding:15px;
+  box-shadow:0 6px 18px rgba(0,0,0,.2);
+}
+
+/* FOTO */
+.llanta img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:12px;
+}
+
+/* TEXTO */
+.llanta h3{
+  margin:5px 0 10px 0;
+  font-size:18px;
+}
+
+.llanta p{
+  margin:4px 0;
+  font-size:14px;
+}
+
+.dato{
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h2>Llantas Rin 15</h2>
+  <p>Autos, camionetas y trabajo</p>
+</div>
+
+<div class="volver">
+  <button onclick="history.back()">⬅ Volver al panel</button>
+</div>
+
+<div class="grid">
+
+  <div class="llanta">
+    <img src="imagenes/700-15-tracc.jpg">
+    <h3>TRACC</h3>
+    <p><span class="dato">Medida:</span> 700-15</p>
+    <p><span class="dato">Uso:</span> Trabajo / tracción</p>
+    <p><span class="dato">Cantidad:</span> 2</p>
+    <p><span class="dato">Precio:</span> $____</p>
+  </div>
+
+  <div class="llanta">
+    <img src="imagenes/700-15-carr.jpg">
+    <h3>CARR</h3>
+    <p><span class="dato">Medida:</span> 700-15</p>
+    <p><span class="dato">Uso:</span> Trabajo / carga</p>
+    <p><span class="dato">Cantidad:</span> 2</p>
+    <p><span class="dato">Precio:</span> $____</p>
+  </div>
+
+  <div class="llanta">
+    <img src="imagenes/195-65r15-ovation.jpg">
+    <h3>Ovation</h3>
+    <p><span class="dato">Medida:</span> 195/65 R15</p>
+    <p><span class="dato">Uso:</span> Auto / ciudad</p>
+    <p><span class="dato">Cantidad:</span> 1</p>
+    <p><span class="dato">Precio:</span> $____</p>
+  </div>
+
+  <div class="llanta">
+    <img src="imagenes/185-65r15-fronway.jpg">
+    <h3>Fronway</h3>
+    <p><span class="dato">Medida:</span> 185/65 R15</p>
+    <p><span class="dato">Uso:</span> Auto urbano</p>
+    <p><span class="dato">Cantidad:</span> 1</p>
+    <p><span class="dato">Precio:</span> $____</p>
+  </div>
+
+  <div class="llanta">
+    <img src="imagenes/195-55r15-mirage.jpg">
+    <h3>Mirage</h3>
+    <p><span class="dato">Medida:</span> 195/55 R15</p>
+    <p><span class="dato">Uso:</span> Auto</p>
+    <p><span class="dato">Cantidad:</span> 2</p>
+    <p><span class="dato">Precio:</span> $____</p>
+  </div>
+
+</div>
+
+<script>
+if(localStorage.getItem("login") !== "ok"){
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
