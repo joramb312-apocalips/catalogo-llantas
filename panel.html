@@ -35,7 +35,7 @@ body{
   opacity:.8;
 }
 
-/* CARD INFO */
+/* CARD */
 .card{
   background:white;
   padding:20px;
@@ -44,47 +44,37 @@ body{
   margin-bottom:25px;
 }
 
-/* TITULO MENU */
+/* TITULO */
 .menu-title{
   font-size:20px;
   margin-bottom:15px;
   color:#111;
 }
 
-/* GRID MENU */
+/* GRID BOTONES */
 .menu{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:16px;
+  gap:15px;
 }
 
 /* BOTONES */
-.item{
-  background:linear-gradient(135deg,#1a1a1a,#333);
+.menu button{
+  background:linear-gradient(135deg,#111,#333);
   color:white;
-  padding:20px 10px;
+  border:none;
+  padding:18px 10px;
   border-radius:14px;
-  text-align:center;
+  font-size:18px;
+  font-weight:bold;
   cursor:pointer;
   transition:.3s;
-  box-shadow:0 6px 15px rgba(0,0,0,.25);
+  box-shadow:0 5px 12px rgba(0,0,0,.25);
 }
 
-.item:hover{
+.menu button:hover{
   transform:scale(1.05);
   background:linear-gradient(135deg,#000,#222);
-}
-
-.item strong{
-  display:block;
-  font-size:18px;
-}
-
-.item span{
-  display:block;
-  margin-top:6px;
-  font-size:13px;
-  color:#ccc;
 }
 </style>
 </head>
@@ -98,75 +88,26 @@ body{
 
 <div class="card">
   <h3>Panel de control</h3>
-  <p>No necesitas bajar mercancía para buscar.</p>
-  <p>Selecciona la medida de la llanta.</p>
+  <p>Selecciona la medida de llanta:</p>
 </div>
 
 <div class="card">
-  <div class="menu-title">📦 Medidas de llantas</div>
+  <div class="menu-title">📦 Medidas disponibles</div>
 
   <div class="menu">
+    <button onclick="ir('rin13.html')">Rin 13</button>
+    <button onclick="ir('rin14.html')">Rin 14</button>
+    <button onclick="ir('rin15.html')">Rin 15</button>
+    <button onclick="ir('rin16.html')">Rin 16</button>
+    <button onclick="ir('rin17.html')">Rin 17</button>
+    <button onclick="ir('rin18.html')">Rin 18</button>
+    <button onclick="ir('rin19.html')">Rin 19</button>
+    <button onclick="ir('rin20.html')">Rin 20</button>
 
-    <div class="item" onclick="abrir('rin13')">
-      <strong>Rin 13</strong>
-      <span>Autos compactos</span>
-    </div>
-
-    <div class="item" onclick="abrir('rin14')">
-      <strong>Rin 14</strong>
-      <span>Uso urbano</span>
-    </div>
-
-    <div class="item" onclick="abrir('rin15')">
-      <strong>Rin 15</strong>
-      <span>Estándar</span>
-    </div>
-
-    <div class="item" onclick="abrir('rin16')">
-      <strong>Rin 16</strong>
-      <span>Camioneta</span>
-    </div>
-
-    <div class="item" onclick="abrir('rin17')">
-      <strong>Rin 17</strong>
-      <span>Alta gama</span>
-    </div>
-
-    <div class="item" onclick="abrir('rin18')">
-      <strong>Rin 18</strong>
-      <span>Deportivas</span>
-    </div>
-
-    <div class="item" onclick="abrir('rin19')">
-      <strong>Rin 19</strong>
-      <span>Especial</span>
-    </div>
-
-    <div class="item" onclick="abrir('rin20')">
-      <strong>Rin 20</strong>
-      <span>Premium</span>
-    </div>
-
-    <div class="item" onclick="abrir('33x12')">
-      <strong>33x12</strong>
-      <span>Todo terreno</span>
-    </div>
-
-    <div class="item" onclick="abrir('31x10r20')">
-      <strong>31x10 R20</strong>
-      <span>Camioneta</span>
-    </div>
-
-    <div class="item" onclick="abrir('27x8.50')">
-      <strong>27x8.50</strong>
-      <span>R14 / R15</span>
-    </div>
-
-    <div class="item" onclick="abrir('31x10.50r15')">
-      <strong>31x10.50</strong>
-      <span>Rin 15</span>
-    </div>
-
+    <button onclick="ir('33x12.html')">33x12</button>
+    <button onclick="ir('31x10r20.html')">31x10 R20</button>
+    <button onclick="ir('27x8.50.html')">27x8.50</button>
+    <button onclick="ir('31x10.50r15.html')">31x10.50 R15</button>
   </div>
 </div>
 
@@ -176,12 +117,10 @@ if(localStorage.getItem("login") !== "ok"){
   window.location.href = "index.html";
 }
 
-function abrir(medida){
-  alert("Abrir catálogo: " + medida);
-  // después aquí irá la lista real
+function ir(pagina){
+  window.location.href = pagina;
 }
 </script>
 
 </body>
 </html>
-
