@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Acceso | Catálogo de Llantas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* Fondo animado */
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Arial, sans-serif;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+  background-size: 400% 400%;
+  animation: fondo 10s ease infinite;
+}
+
+@keyframes fondo {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* Caja login */
+.login{
+  background: rgba(255,255,255,0.95);
+  padding:30px;
+  border-radius:15px;
+  width:100%;
+  max-width:320px;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  text-align:center;
+}
+
+.login h2{
+  margin-bottom:20px;
+  color:#111;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:16px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  margin-top:15px;
+  border:none;
+  border-radius:8px;
+  background:#111;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#333;
+}
+
+.error{
+  color:red;
+  margin-top:10px;
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login">
+  <h2>Acceso privado</h2>
+
+  <input id="usuario" placeholder="Usuario">
+  <input id="clave" type="password" placeholder="Contraseña">
+
+  <button onclick="login()">Entrar</button>
+
+  <div class="error" id="error">Datos incorrectos</div>
+</div>
+
+<script>
+function login(){
+  const u = document.getElementById("usuario").value;
+  const p = document.getElementById("clave").value;
+
+  if(u === "antonio" && p === "AZRefaccionesHM"){
+    localStorage.setItem("login","ok");
+    window.location.href = "panel.html";
+  }else{
+    document.getElementById("error").style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
